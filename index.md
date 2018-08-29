@@ -31,4 +31,11 @@ $$
 z = \frac{x - \mu}{\sigma}
 $$
 
-where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution. 
+where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution, respectively. 
+
+The transformation above can be plotted in standard normal distrobution curve; a bell-shaped curve that depicts the probability of occurence of z-score vs. z-values.
+
+
+
+As stated by Failry [Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
+> You more frequently see the normal curve plotted as a probability density function (i.e. the bell curve). But most of the time when you actually use it, such as to look up the probability of something being more than 2 standard deviations away from the mean by using a Z table, you are actually using the cumulative density function.
