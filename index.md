@@ -40,6 +40,28 @@ This transformation from a normal to standard normal distribution can be best sh
 One, however, should note that we usually use this plot to find cumulative probabilities. As stated by [Failry Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
 > You more frequently see the normal curve plotted as a probability density function (i.e. the bell curve). But most of the time when you actually use it, such as to look up the probability of something being more than 2 standard deviations away from the mean by using a Z table, you are actually using the cumulative density function.
 
-A p-value is of the type of **cumulative probability**. For instance, for left-tailed test and for any particular value of z-score, namely $z_0$, p-value is the cumulative probability of z values in the $[-\infty, z_0]$ range (Figure below.)
+A p-value is of the type of **Cumulative Probability**. For instance, for left-tailed test and for any particular value of z-score, namely $z_0$, p-value is the cumulative probability of z values in the $[-\infty, z_0]$ range. Check out the figure below ($z_0$ is Test Statistics). 
 
 <div style="text-align:center"><img src ="left-tailed-test.png" height="300" width="300"/><figcaption>Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Matcaptain </a></figcaption></div>
+
+## Type I error
+Now that we have a better understanding of p-value, let's discuss Type I error which is the probability of rejecting the Null Hypothesis, when it is actually true. The statement "when the Null Hypothesis is true" is a very important assumption behind calculating Type I error and is often overlooked.
+
+
+To verify the Null Hypothesis (up to the significane level $\alpha$), we do the following:
+1. We assume $H_0$ is true and based on that we calculate the test statistic, $z_0$. 
+2. We use the test statisitc to find the corresponding p-value. 
+3. p-value is the cumulative probability of the test statistic when $H_0$ is true.
+
+My other interpretation:
+1. $\bar{x}$ can be very close to or very different from $\mu$. 
+2. $\bar{x}$, the sample mean has a distribution. 
+3. How likely is that, for a given $\bar{x}$, the mean of $\bar{x}$ is actually $\mu$?
+
+To solve this problem, we assume (the Null Hypothesis) that $\mu$ is the mean of the distribution. If that's the case, then, we can calculate the test statistic, $z_0$, according to the formula above which in turn leads to obtaining the asociated p-value.  
+
+Obvoiusly, the closer $\bar x$ is to $\mu$ (or  $z_0$ to 0), the larger the p-value, and vice versa. Let's assume that  $z_0$ is far away from zero and we find p = 0.03. This indicates that, assuming Null Hypothesis is correct, there is only 3% probability that  $z \leq z_0$ belong to a distribution where its mean is given by $\mu$. 
+
+In the next step, we assign a cutoff; or the significance level. An arbitrary number that determines the level of certainty wwe want o have in order to accept the truthness of $H_0$ and call it $\alpha$. 
+
+If $\alpha$ = 0.5, therefore our model with p = 0.03 has not achieved the level of confidence we desired and consequently, in this level, we reject $H_0$. Because we are not up to 5% sure that $\mu$ is the the mean of $\bar x$ distribution. However, if $\alpha < p$, we cannot reject the Null Hypothesis. 
