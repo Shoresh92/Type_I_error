@@ -24,18 +24,17 @@ Shoresh: explain here: where does the p-value come from? For example explain why
 
 > p-value is the probability that we would get the observed difference between the A and B groups (or a more extreme difference) by random chance.
 
-## Where does p-value come from
-Let's forget about significance level for a moment and focus on the origin of p-value. We know that for any variable $x$ with normal distribution, the standard score, or z-score is defined as follwoing:
+## Where does p-value come from?
+p-value is obtained from the normal probability density plot. Let's forget about significance level for a moment and focus on the origin of p-value. We know that for any variable $x$ with normal distribution, the standard score, or z-score is defined as follwoing:
 
 $$
 z = \frac{x - \mu}{\sigma}
 $$
-
 where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution, respectively. 
 
-The transformation above can be plotted in standard normal distrobution curve; a bell-shaped curve that depicts the probability of occurence of z-score vs. z-values.
+This transformation from a normal distribution to standard normal distribution can be best shown in probablity density plot which is the probability density function vs. z-values, as shown in figure below. 
 
-
-
-As stated by Failry [Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
+One, howver, should note that we usually use this plot to find cumulative probabilities. As stated by Failry [Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
 > You more frequently see the normal curve plotted as a probability density function (i.e. the bell curve). But most of the time when you actually use it, such as to look up the probability of something being more than 2 standard deviations away from the mean by using a Z table, you are actually using the cumulative density function.
+
+A p-value for any particular z-score, namely $z_0$, is in fact the cumulative probability, or the area under curve when $z \leq z_0$. 
