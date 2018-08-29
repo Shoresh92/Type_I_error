@@ -35,7 +35,7 @@ where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution
 
 This transformation from a normal distribution to standard normal distribution can be best shown in probablity density plot which is the probability density function vs. z-values, as shown in figure below.
 
-![Probability Density Plot](/fairlynerdy.png){:height="700px" width="400px"}
+![Probability Density Plot](/fairlynerdy.png){:height="500px" width="500px"}
 
 Figure source: [Failry Nerd](http://www.fairlynerdy.com/normal-distribution-summary/)
 
