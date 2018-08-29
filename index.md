@@ -35,14 +35,14 @@ where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution
 
 This transformation from a normal to standard normal distribution can be best shown in probablity density plot which is the probability density function vs. z-values, as shown in figure below. 
 
-<div style="text-align:center"><img src ="fairlynerdy.png" height="400" width="300"/><figcaption>Source: <a href="http://www.fairlynerdy.com/normal-distribution-summary/"> Failry Nerdy </a></figcaption></div>
+<div style="text-align:center"><img src ="fairlynerdy.png" height="300" width="500"/><figcaption>Source: <a href="http://www.fairlynerdy.com/normal-distribution-summary/"> Failry Nerdy </a></figcaption></div>
 
 One, however, should note that we usually use this plot to find cumulative probabilities. As stated by [Failry Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
 > You more frequently see the normal curve plotted as a probability density function (i.e. the bell curve). But most of the time when you actually use it, such as to look up the probability of something being more than 2 standard deviations away from the mean by using a Z table, you are actually using the cumulative density function.
 
 A p-value is of the type of **Cumulative Probability**. For instance, for left-tailed test and for any particular value of z-score, namely $z_0$, p-value is the cumulative probability of z values in the $[-\infty, z_0]$ range. Check out the figure below ($z_0$ is Test Statistics). 
 
-<div style="text-align:center"><img src ="left-tailed-test.png" height="400" width="300"/><figcaption>Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Matcaptain </a></figcaption></div>
+<div style="text-align:center"><img src ="left-tailed-test.png" height="300" width="500"/><figcaption>Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Matcaptain </a></figcaption></div>
 
 
 ## Type I error
