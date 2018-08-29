@@ -20,9 +20,12 @@ The probability of rejecting a Null Hypothesis, $H_0$, when $H_0$ is actually tr
 
 In A/B testing, the p-value is the probability that we would get the observed difference between the A and B groups (or a more extreme difference) by random chance. 
 
-Shoresh: explain here: where does the p-value come from? For example explain why the statement above is correc?
+According to [minitab](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values)
+> In technical terms, a p value is the probability of obtaining an effect at least as extreme as the one in your sample data, assuming the truth of the null hypothesis.
 
-> p-value is the probability that we would get the observed difference between the A and B groups (or a more extreme difference) by random chance.
+And according to the same reference, 
+> P values are calculated based on the assumptions that the null is true for the population and that the difference in the sample is caused entirely by random chance. Consequently, P values can’t tell you the probability that the null is true or false because it is 100% true from the perspective of the calculations.
+
 
 ## Where does p-value come from?
 p-value is obtained from the normal probability density plot. Let's forget about significance level for a moment and focus on the origin of p-value. We know that for any variable $x$ with normal distribution, the standard score, or z-score is defined as follwoing:
@@ -42,13 +45,12 @@ One, however, should note that we usually use this plot to find cumulative proba
 
 A p-value is of the type of **Cumulative Probability**. For instance, for left-tailed test and for any particular value of z-score, namely $z_0$, p-value is the cumulative probability of z values in the $[-\infty, z_0]$ range. Check out the figure below ($z_0$ is Test Statistics). 
 
-<div style="text-align:center"><img src ="left-tailed-test.png" height="300" width="500"/><figcaption>Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Matcaptain </a></figcaption></div>
+<div style="text-align:center"><img src ="left-tailed-test.png" height="300" width="500"/><figcaption>Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain </a></figcaption></div>
 
 
 ## Type I error
 
-Now that we have a better understanding of p-value, let's discuss Type I error which is the probability of rejecting the Null Hypothesis, when it is actually true. The statement "when the Null Hypothesis is true" is a very important assumption behind calculating Type I error and is often overlooked.
-
+Now that we have a better understanding of p-value, let's discuss Type I error which is the probability of rejecting the Null Hypothesis (also named the significance level and is denoted by $\alpha$), when it is actually true. The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
 
 To verify the Null Hypothesis (up to the significane level $\alpha$), we do the following:
 1. We assume $H_0$ is true and based on that we calculate the test statistic, $z_0$. 
