@@ -30,11 +30,16 @@ p-value is obtained from the normal probability density plot. Let's forget about
 $$
 z = \frac{x - \mu}{\sigma}
 $$
+
 where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution, respectively. 
 
-This transformation from a normal distribution to standard normal distribution can be best shown in probablity density plot which is the probability density function vs. z-values, as shown in figure below. 
+This transformation from a normal distribution to standard normal distribution can be best shown in probablity density plot which is the probability density function vs. z-values, as shown in figure below.
 
-One, howver, should note that we usually use this plot to find cumulative probabilities. As stated by Failry [Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
+![Probability Density Plot](https://github.com/Shoresh92/typeI_error/blob/master/fairlynerdy.png)
+
+Figure source: [Failry Nerd](http://www.fairlynerdy.com/normal-distribution-summary/)
+
+One, however, should note that we usually use this plot to find cumulative probabilities. As stated by Failry [Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
 > You more frequently see the normal curve plotted as a probability density function (i.e. the bell curve). But most of the time when you actually use it, such as to look up the probability of something being more than 2 standard deviations away from the mean by using a Z table, you are actually using the cumulative density function.
 
-A p-value for any particular z-score, namely $z_0$, is in fact the cumulative probability, or the area under curve when $z \leq z_0$. 
+A p-value for any particular z-score, namely $z_0$, is in fact the **cumulative probability**, or the area under curve when $z \leq z_0$ (for the sake of simplicity I do not discuss right-tailed or two-tailed situation here).
