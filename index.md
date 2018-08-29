@@ -35,7 +35,7 @@ where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution
 
 This transformation from a normal to standard normal distribution can be best shown in probablity density plot which is the probability density function vs. z-values, as shown in figure below. 
 
-<div style="text-align:center"><img src ="fairlynerdy.png" height="400" width="400"/><figcaption>Source: <a href="http://www.fairlynerdy.com/normal-distribution-summary/"> Failry Nerd </figcaption></div>
+<div style="text-align:center"><img src ="fairlynerdy.png" height="400" width="400"/><figcaption>Source: <a href="http://www.fairlynerdy.com/normal-distribution-summary/"> Failry Nerd </a></figcaption></div>
 
 One, however, should note that we usually use this plot to find cumulative probabilities. As stated by [Failry Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
 > You more frequently see the normal curve plotted as a probability density function (i.e. the bell curve). But most of the time when you actually use it, such as to look up the probability of something being more than 2 standard deviations away from the mean by using a Z table, you are actually using the cumulative density function.
