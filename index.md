@@ -1,6 +1,6 @@
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} }); </script> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-# Understanding Type I Error in Statistical Analysis
+# Why we reject Null Hypothesis when $p \leq \alpha$
 I want to answer this question
 > Why we reject Null Hypothesis, when $p \geq \alpha$
 where p is the famous p-value and $\alpha$ is the significance level. 
@@ -35,9 +35,9 @@ where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution
 
 This transformation from a normal to standard normal distribution can be best shown in probablity density plot which is the probability density function vs. z-values, as shown in figure below. 
 
-<div style="text-align:center"><img src ="fairlynerdy.png" height="400" width="400"/><figcaption>Source: <a href="http://www.fairlynerdy.com/normal-distribution-summary/"> Failry Nerd </a></figcaption></div>
+<div style="text-align:center"><img src ="fairlynerdy.png" height="400" width="400"/><figcaption>Source: <a href="http://www.fairlynerdy.com/normal-distribution-summary/"> Failry Nerdy </a></figcaption></div>
 
 One, however, should note that we usually use this plot to find cumulative probabilities. As stated by [Failry Nerdy](http://www.fairlynerdy.com/normal-distribution-summary/)
 > You more frequently see the normal curve plotted as a probability density function (i.e. the bell curve). But most of the time when you actually use it, such as to look up the probability of something being more than 2 standard deviations away from the mean by using a Z table, you are actually using the cumulative density function.
 
-A p-value for any particular z-score, namely $z_0$, is in fact the **cumulative probability**, or the area under curve when $z \leq z_0$ (for the sake of simplicity I do not discuss right-tailed or two-tailed situations here).
+A p-value is of the type of **cumulative probability**. For instance, for left-tailed test and for any particular value of z-score, namely $z_0$, p-value is the cumulative probability of z values in the $[-\infty, z_0]$ range.
