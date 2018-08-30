@@ -34,7 +34,7 @@ One, however, should note that $p$-value is of the type of **Cumulative Probabil
 
 ## A simple example
 
-Having the sample mean, $\bar x = \bar x_0$, I want to find out the likelihood that the population mean is $\mu = \mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
+I use a simple z-test here. Having the sample mean, $\bar x = \bar x_0$, I want to find out the likelihood that the population mean is $\mu = \mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
 as 
 
 $$H_0: \mu = \mu_0$$. 
@@ -48,34 +48,15 @@ where $n$ is the sample size. The z-score table can help us find the $p$-value. 
 
 Let's assume $p=0.03$. This means that if the Null Hypotheis is true, only 3% of the time we find a random sample with $\bar x = \bar x_0$. 
 
+
 ## $\alpha$ and $p$-value
 
-$\alpha$, the [significance level](https://en.wikipedia.org/wiki/Statistical_significance#Role_in_statistical_hypothesis_testing), is the probability of occurence of Type I error which is rejecting Null Hypothesis when it is true. 
+$\alpha$, the [significance level](https://en.wikipedia.org/wiki/Statistical_significance#Role_in_statistical_hypothesis_testing), is the probability of occurence of Type I error which is rejecting Null Hypothesis when it is true. The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
 
-S. L.: A measure of how likely it is to draw a false conclusion in a statistical test, when the results are really just random variations.
+On the other hand, $p$-value is the probability coming up with a sample with $\bar-x = \bar x_0$ [due to random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values). 
+ 
+Obvoiusly, the closer $\bar x_0$ to $\mu$ (or  $z_0$ to 0), the larger the p-value, and vice versa. 
 
-
-
-
-Type I error, a.k.a as the Significance Level, * Significance Level ($ \alpha $)
-
-The probability of rejecting a Null Hypothesis, $H_0$, when $H_0$ is actually true!
-
-Now that we have a better understanding of p-value, let's discuss Type I error which is the probability of rejecting the Null Hypothesis (also named the significance level and is denoted by $\alpha$), when it is actually true. The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
-
-To verify the Null Hypothesis (up to the significane level $\alpha$), we do the following:
-1. We assume $H_0$ is true and based on that we calculate the test statistic, $z_0$. 
-2. We use the test statisitc to find the corresponding p-value. 
-3. p-value is the cumulative probability of the test statistic when $H_0$ is true.
-
-My other interpretation:
-1. $\bar{x}$ can be very close to or very different from $\mu$. 
-2. $\bar{x}$, the sample mean has a distribution. 
-3. How likely is that, for a given $\bar{x}$, the mean of $\bar{x}$ is actually $\mu$?
-
-To solve this problem, we assume (the Null Hypothesis) that $\mu$ is the mean of the distribution. If that's the case, then, we can calculate the test statistic, $z_0$, according to the formula above which in turn leads to obtaining the asociated p-value.  
-
-Obvoiusly, the closer $\bar x$ is to $\mu$ (or  $z_0$ to 0), the larger the p-value, and vice versa. Let's assume that  $z_0$ is far away from zero and we find p = 0.03. This indicates that, assuming Null Hypothesis is correct, there is only 3% probability that  $z \leq z_0$ belong to a distribution where its mean is given by $\mu$. 
 
 In the next step, we assign a cutoff; or the significance level. An arbitrary number that determines the level of certainty wwe want o have in order to accept the truthness of $H_0$ and call it $\alpha$. 
 
@@ -85,7 +66,6 @@ An alernative explanations is using Type I error definition,
 > the probability of rejecting Null Hypothesis, when it it true
 
 Therefore, p = 0.03 is the probability of rejecting the true Null Hypothesis which is smaller than our threshhold, $\alpha$. Therefore, we can reject $H_0$. On the other hand, for $\alpha = 0.01$, p = 0.03 indicates that the likeliehod of error is beyond our confort level and therefore do not reject $H_0$. 
-
 
 
 If you have any feedback, please do not hesistate to share.
