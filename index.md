@@ -10,20 +10,12 @@ The reason why we reject $H_0$ when $p \leq \alpha$ was not quite clear to me. A
 
 Before I continue, I assume the reader is familiar with Hypothesis Testing and to keep this writing short, I only discuss few concepts that are crucial in understanding the outcome. 
 
-## Basic Concepts
-
-* p-value
-
-In A/B testing, the p-value is the probability that we would get the observed difference between the A and B groups (or a more extreme difference) by random chance. 
-
-And according to the same reference, 
-> $p$-values are calculated based on the assumptions that the null is true for the population and that the difference in the sample is caused entirely by random chance. Consequently, P values can’t tell you the probability that the null is true or false because it is 100% true from the perspective of the calculations.
-
 
 ## Where does p-value come from?
 
 According to [minitab](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values)
-> In technical terms, a $p$-value is the probability of obtaining an effect at least as extreme as the one in your sample data, assuming the truth of the null hypothesis. Let's elaborate on this. 
+> In technical terms, a $p$-value is the probability of obtaining an effect at least as extreme as the one in your sample data, assuming the truth of the null hypothesis. 
+Let's elaborate on this. 
 
 Any variable $x$ with normal distribution can be transormed to variable $z$ with standard normal distribution using the following formula
 
@@ -72,6 +64,16 @@ An alernative explanations is using Type I error definition,
 > the probability of rejecting Null Hypothesis, when it it true
 
 Therefore, p = 0.03 is the probability of rejecting the true Null Hypothesis which is smaller than our threshhold, $\alpha$. Therefore, we can reject $H_0$. On the other hand, for $\alpha = 0.01$, p = 0.03 indicates that the likeliehod of error is beyond our confort level and therefore do not reject $H_0$. 
+
+## Basic Concepts
+
+* p-value
+
+In A/B testing, the p-value is the probability that we would get the observed difference between the A and B groups (or a more extreme difference) by random chance. 
+
+And according to the same reference, 
+> $p$-values are calculated based on the assumptions that the null is true for the population and that the difference in the sample is caused entirely by random chance. Consequently, P values can’t tell you the probability that the null is true or false because it is 100% true from the perspective of the calculations.
+
 
 
 If you have any feedback, please do not hesistate to share.
