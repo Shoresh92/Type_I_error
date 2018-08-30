@@ -15,9 +15,8 @@ Before I continue, I assume the reader is familiar with Hypothesis Testing and t
 
 According to [minitab](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values)
 > In technical terms, a $p$-value is the probability of obtaining an effect at least as extreme as the one in your sample data, assuming the truth of the null hypothesis. 
-Let's elaborate on this. 
 
-Any variable $x$ with normal distribution can be transormed to variable $z$ with standard normal distribution using the following formula
+Let's elaborate on this: Any variable $x$ with normal distribution can be transormed to variable $z$ with standard normal distribution using the following formula
 
 $$
 z = \frac{x - \mu}{\sigma}
@@ -26,10 +25,6 @@ $$
 where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution, respectively and $z$ is the z-score. 
 
 The mean and standard deviation of standard normal distribution, also known as the probability density distribution (figure below) are 1 and 0, respectively. Also, the area aunder curve for the distribution is unity. $p$-value is obtained from the probability density distribution. 
-
-
-<div style="text-align:center"><img src ="fairlynerdy.png" height="200" width="300"/><figcaption>Source: <a href="http://www.fairlynerdy.com/normal-distribution-summary/"> Failry Nerdy </a></figcaption></div>
-
 
 One, however, should note that $p$-value is of the type of **Cumulative Probability**. For instance, for left-tailed test and the test statistic $z_0$, $p$-value is the cumulative probability of $z$-values in the $[-\infty, z_0]$ range (figure below). Check out [this link](http://www.fairlynerdy.com/normal-distribution-summary/) for more. 
 
