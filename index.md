@@ -32,6 +32,21 @@ One, however, should note that $p$-value is of the type of **Cumulative Probabil
 <div style="text-align:center"><img src ="left-tailed-test.png" height="200" width="300"/><figcaption>Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain </a></figcaption></div>
 
 
+## A simple example
+
+Now, let's assume that having the my sample mean, $\bar x$, I want to find out that how likely is that the population mean is $\mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
+as 
+
+$$H_0: \mu = \mu_0$$. 
+
+Assuming the Null Hypotheis is true, I want to find out how likely is it that $\bar_{x}$ belongs to a disrtibution with $\mu = \mu_0$, through which I define my test statistic as
+
+$z_0 = \frac{\bar x - \mu_0}{\sigma/\sqrt{n}}$
+
+where $n$ is the sample size. 
+
+
+
 
 ## Type I error
 
