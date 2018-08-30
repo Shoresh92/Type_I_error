@@ -34,21 +34,20 @@ One, however, should note that $p$-value is of the type of **Cumulative Probabil
 
 ## A simple example
 
-Now, let's assume that having the my sample mean, $\bar x$, I want to find out that how likely is that the population mean is $\mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
+Having the sample mean, $\bar x$, I want to find out the likelihood that the population mean is $\mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
 as 
 
 $$H_0: \mu = \mu_0$$. 
 
-Assuming the Null Hypotheis is true, I want to find out how likely is it that $\bar {x}$ belongs to a disrtibution with $\mu = \mu_0$, through which I define my test statistic as
+Assuming the Null Hypotheis is true, I want to find out how likely is it that $\bar {x}$ belongs to a disrtibution with $\mu = \mu_0$. Hence, I define the test statistic as
 
 $z_0 = \frac{\bar x - \mu_0}{\sigma/\sqrt{n}}$
 
-where $n$ is the sample size. 
+where $n$ is the sample size. The z-score table can help us find the $p$-value. As a reminder, the obtained $p$-value is the cumulative probability that $z \leq z_0$ belong to a distribution with $\mu = \mu_0$ assuming that $H_0$ is true. [In other words](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values), 
+> $p$-values are calculated based on the assumptions that the null is true for the population and that **the difference in the sample is caused entirely by random chance.**
 
 
-
-
-## Type I error
+## Type I error and $p$-value
 
 * Significance Level ($ \alpha $)
 
@@ -78,15 +77,6 @@ An alernative explanations is using Type I error definition,
 > the probability of rejecting Null Hypothesis, when it it true
 
 Therefore, p = 0.03 is the probability of rejecting the true Null Hypothesis which is smaller than our threshhold, $\alpha$. Therefore, we can reject $H_0$. On the other hand, for $\alpha = 0.01$, p = 0.03 indicates that the likeliehod of error is beyond our confort level and therefore do not reject $H_0$. 
-
-## Basic Concepts
-
-* p-value
-
-In A/B testing, the p-value is the probability that we would get the observed difference between the A and B groups (or a more extreme difference) by random chance. 
-
-And according to the same reference, 
-> $p$-values are calculated based on the assumptions that the null is true for the population and that the difference in the sample is caused entirely by random chance. Consequently, P values can’t tell you the probability that the null is true or false because it is 100% true from the perspective of the calculations.
 
 
 
