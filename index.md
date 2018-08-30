@@ -34,22 +34,30 @@ One, however, should note that $p$-value is of the type of **Cumulative Probabil
 
 ## A simple example
 
-Having the sample mean, $\bar x$, I want to find out the likelihood that the population mean is $\mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
+Having the sample mean, $\bar x = \bar x_0$, I want to find out the likelihood that the population mean is $\mu = \mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
 as 
 
 $$H_0: \mu = \mu_0$$. 
 
 Assuming the Null Hypotheis is true, I want to find out how likely is it that $\bar {x}$ belongs to a disrtibution with $\mu = \mu_0$. Hence, I define the test statistic as
 
-$z_0 = \frac{\bar x - \mu_0}{\sigma/\sqrt{n}}$
+$z_0 = \frac{\bar x_0 - \mu_0}{\sigma/\sqrt{n}}$
 
 where $n$ is the sample size. The z-score table can help us find the $p$-value. As a reminder, the obtained $p$-value is the cumulative probability that $z \leq z_0$ belong to a distribution with $\mu = \mu_0$ assuming that $H_0$ is true. [In other words](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values), 
-> $p$-values are calculated based on the assumptions that the null is true for the population and that **the difference in the sample is caused entirely by random chance.**
+> $p$-values are calculated based on the assumptions that the null is true for the population and that the difference in the sample **is caused entirely by random chance.**
+
+Let's assume $p=0.03$. This means that if the Null Hypotheis is true, only 3% of the time we find a random sample with $\bar x = \bar x_0$. 
+
+## $\alpha$ and $p$-value
+
+$\alpha$, the [significance level](https://en.wikipedia.org/wiki/Statistical_significance#Role_in_statistical_hypothesis_testing), is the probability of occurence of Type I error which is rejecting Null Hypothesis when it is true. 
+
+S. L.: A measure of how likely it is to draw a false conclusion in a statistical test, when the results are really just random variations.
 
 
-## Type I error and $p$-value
 
-* Significance Level ($ \alpha $)
+
+Type I error, a.k.a as the Significance Level, * Significance Level ($ \alpha $)
 
 The probability of rejecting a Null Hypothesis, $H_0$, when $H_0$ is actually true!
 
