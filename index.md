@@ -39,7 +39,7 @@ as
 
 $$H_0: \mu = \mu_0$$. 
 
-Assuming the Null Hypotheis is true, I want to find out how likely is it that $\bar_{x}$ belongs to a disrtibution with $\mu = \mu_0$, through which I define my test statistic as
+Assuming the Null Hypotheis is true, I want to find out how likely is it that $\bar {x}$ belongs to a disrtibution with $\mu = \mu_0$, through which I define my test statistic as
 
 $z_0 = \frac{\bar x - \mu_0}{\sigma/\sqrt{n}}$
 
