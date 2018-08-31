@@ -28,10 +28,10 @@ where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution
 
 The mean and standard deviation of standard normal distribution, also known as the probability density distribution (figure below) are 1 and 0, respectively, and its area curve is unity. $p$-values are obtained from the probability density distribution. 
 
-In fact, for the test statistic $z$, the associated $p$-value is the **Cumulative Probability** of observing $z \el (-\infty, z]$ under the condition that the Null Hypothesis is true (figure below). Mathematically speaking, for any $z_0$ value, we can write $p$-value as
+In fact, for the test statistic $z$, the associated $p$-value is the **Cumulative Probability** of observing $z \in (-\infty, z]$ under the condition that the Null Hypothesis is true (figure below). Mathematically speaking, for any $z_0$ value, we can write $p$-value as
 
 $$
-p(z\el(\infinity, z_0)|H_0)
+p(z\in(\infinity, z_0)|H_0)
 $$
 
 <div style="text-align:center"><img src ="left-tailed-test.png" height="200" width="300"/><figcaption> <font size="2">Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain</a></font></figcaption></div>
