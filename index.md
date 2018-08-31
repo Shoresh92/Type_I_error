@@ -74,4 +74,4 @@ Since we only have 3% chance of observing the effect due to sampling error, we c
 
 Following the same logic, we are $\alpha = 0.01$ confident that the observed effect is random and $H_0$ is true. Therefore, we do not reject $H_0$ **at 1% level**.
 
-I hope the reader is convinced why $H-0$ is rejected when $p \leq \alpha$. This interpretation can be used to interpret the results of any hypothesis testing that employs $p$-values.
+I hope the reader is convinced why $H_0$ is rejected when $p \leq \alpha$. This interpretation can be used to interpret the results of any hypothesis testing that employs $p$-values.
