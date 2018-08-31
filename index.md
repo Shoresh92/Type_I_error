@@ -34,7 +34,7 @@ One, however, should note that $p$-value is of the type of **Cumulative Probabil
 
 ## A simple example
 
-I use a simple z-test here. Having the sample mean, $\bar x = \bar x_0$, I want to find out the likelihood that the population mean is $\mu = \mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
+I use a simple left-tailed z-test here. Having the sample mean, $\bar x = \bar x_0$, I want to find out the likelihood that the population mean is $\mu = \mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
 as 
 
 $$H_0: \mu = \mu_0$$. 
@@ -51,21 +51,26 @@ Let's assume $p=0.03$. This means that if the Null Hypotheis is true, only 3% of
 
 ## $\alpha$ and $p$-value
 
-$\alpha$, the [significance level](https://en.wikipedia.org/wiki/Statistical_significance#Role_in_statistical_hypothesis_testing), is the probability of occurence of Type I error which is rejecting Null Hypothesis when it is true. The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
+$\alpha$, the [significance level](https://en.wikipedia.org/wiki/Statistical_significance#Role_in_statistical_hypothesis_testing), is the probability of the occurence of Type I error, i.e., rejecting Null Hypothesis when it is true. The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
 
-On the other hand, $p$-value is the probability coming up with a sample with $\bar-x = \bar x_0$ [due to random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values). 
- 
-Obvoiusly, the closer $\bar x_0$ to $\mu$ (or  $z_0$ to 0), the larger the p-value, and vice versa. 
+Significance level is the level of risk we want to take in rejecting $H_0$. The lower this value, the more confident we are about the outcome of the test.  For example, $\alpha$ = 5% indicates we accept 5% risk in rejecting true $H_0$. In other words, we want to be up to 95% confident that we rightfully rejected Null. 
 
+On the other hand, $p$-value is the probability of observing an effect (like coming up with a sample with sampling mean $\bar x_0$) [due to random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values), when the effect does not actually exist (the population mean is $\mu_0$). Obvoiusly, the closer $\bar x_0$ to $\mu_0$ (or  $z_0$ to 0), the bigger the area under curve and p-value, and vice versa.
 
-In the next step, we assign a cutoff; or the significance level. An arbitrary number that determines the level of certainty wwe want o have in order to accept the truthness of $H_0$ and call it $\alpha$. 
+[NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/)
+> This is the most critical concept to keep in mind as it means that one cannot infer from the p value whether H0 is true or false.
 
-If $\alpha$ = 0.5, therefore our model with p = 0.03 has not achieved the level of confidence we desired and consequently, in this level, we reject $H_0$. Because we are not up to 5% sure that $\mu$ is the the mean of $\bar x$ distribution. However, if $\alpha < p$, we cannot reject the Null Hypothesis. 
+[NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/)
+> The concept of a p value is not simple and any statements associated with it must be considered cautiously.
 
-An alernative explanations is using Type I error definition, 
-> the probability of rejecting Null Hypothesis, when it it true
+> the p value only gives us the probability that, simply owing to the chance selection of patients from the larger (target) population, the clinical experiment resulted in a difference in the samples, as large or larger, than the actual 26% observed.
 
-Therefore, p = 0.03 is the probability of rejecting the true Null Hypothesis which is smaller than our threshhold, $\alpha$. Therefore, we can reject $H_0$. On the other hand, for $\alpha = 0.01$, p = 0.03 indicates that the likeliehod of error is beyond our confort level and therefore do not reject $H_0$. 
+> Thus a p value is simply a measure of the strength of evidence against H0.
+
+> The p value is calculated based on an assumption that chance is the only reason for observing any difference. Thus it cannot provide evidence for the truth of that statement.
+
+> An artificial cut point is chosen, called the significance level, and the result is called statistically significant if the p value is less than the significance level leading to the rejection of the null hypothesis.
+
 
 
 If you have any feedback, please do not hesistate to share.
