@@ -62,14 +62,10 @@ Assuming $H_0$ is true, $p$ gives the probability of observing an effect (like c
 
 On the other hand, $\alpha$ or the significance level is an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. Therefore, $p \leq \alpha$ means the evidence in support of $H_0$ is not strong in \alpha level and $p > \alpha$ says the evidence are strong enough not to reject $H_0$.
 
-$\alpha$, the [significance level](https://en.wikipedia.org/wiki/Statistical_significance#Role_in_statistical_hypothesis_testing), is the probability of the occurence of Type I error, i.e., rejecting Null Hypothesis when it is true. 
+BETTER: when p = 3%, it means there is a 3% chance to observe an effect (solely due to the sampling error). On the other hand in $\alpha = 5%$ level we expect the randomness up to 5%. Since we cannot be up to 5% sure that the effect is solely due to random errors, we reject the assumption undelying the calculation of $p-value$. 
+
+On the other hand, if $p > \alpha$, we claim that at $\alpha$ level, it is possible to observe those effects due to random erros. 
 
 The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
-
-Significance level is the level of risk we want to take in rejecting $H_0$. The lower this value, the more confident we are about the outcome of the test.
-
-
-
-
 
 If you have any feedback, please do not hesistate to share.
