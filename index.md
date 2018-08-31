@@ -6,9 +6,9 @@ Understanding Type I and II errors are of the fundamental importance in interpre
 
 In Hypothesis Testing, we normally define (somehow arbitrary) significance level ($\alpha$) and use our test statistic to calcuate the well-known $p$-value. If $p \leq \alpha$ we reject the Null Hypothesis, $H_0$, and do not reject it otherwise. 
 
-The reason why we reject $H_0$ when $p \leq \alpha$ was not quite clear to me. With access to stat books, articles and blog posts online as well as offline resources, we sometimes, in words of a Stackexchange user (do not have the guts[(https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th)] to question our understanding of well-known mehotds such as A/B testing. You get the impressions that everybody gets it except YOU! On the other hand, a simple Google search shows that it is one of the most confusing concepts. [Academic research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/) also warn against misunderstanding and misinterpreting $p$-value and significance level.
+The reason why we reject $H_0$ when $p \leq \alpha$ was not quite clear to me. With access to stat books, articles and blog posts online as well as offline resources, we [sometimes do not have the guts](https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th) to question our understanding of the assumptions behind well-known techniques such as A/B testing. On the other hand, studying the results of a simple Google search shows that it is one of the most confusing and misunderstood concepts. [Academic research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/) also warn against misinterpreting $p$-values.
 
-> The concept of a p value is not simple and any statements associated with it must be considered cautiously.
+> The concept of a $p$-value is not simple and any statements associated with it must be considered cautiously.
 
 Before I continue, I assume the reader is familiar with the concepts behind Hypothesis Testing. 
 
