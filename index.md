@@ -31,7 +31,7 @@ The mean and standard deviation of standard normal distribution, also known as t
 In fact, for the test statistic $z$, the associated $p$-value is the **Cumulative Probability** of observing $z \in (-\infty, z]$ under the condition that the Null Hypothesis is true (figure below). Mathematically speaking, for any $z_0$ value, we can write $p$-value as
 
 $$
-p(z\in(\infinity, z_0)|H_0)
+p(z\in(\infty, z_0)|H_0)
 $$
 
 <div style="text-align:center"><img src ="left-tailed-test.png" height="200" width="300"/><figcaption> <font size="2">Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain</a></font></figcaption></div>
