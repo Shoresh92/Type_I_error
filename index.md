@@ -37,42 +37,41 @@ $$
 <div style="text-align:center"><img src ="left-tailed-test.png" height="200" width="300"/><figcaption> <font size="2">Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain</a></font></figcaption></div>
 
 
-## Interpretation
+## Interpreting $p$
 
-Let's assume we want to verify the claim that for the sample mean $\bar x = \bar x_0$, the population mean is $\mu = \mu_0$. 
-We start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
-as 
+Let's use a simple example and assume we want to verify the claim that having a sample with the sample mean $\bar x = \bar x_0$, the population mean is $\mu = \mu_0$. Null Hypothesis (assuming a random sample and Central Limit Theorem) is stated as
 
 $$
 H_0: \mu = \mu_0,
 $$
 
-indicating that the popuation mean is in fact equal to $\mu_0$. Assuming the Null Hypotheis is true, we then want to find out how likely is it that we can a sample with sample mean equal or smaller than $\bar {x} = \bar x_0$.  We can achive that by finding the p-value associated with the test statistic given by
+indicating that the popuation mean is in fact equal to $\mu_0$ and $\bar x_0$ is an error due to sampling. Assuming the Null Hypotheis is true, we then want to find out the likelihood of generating a sample with the sample mean equal or smaller than $\bar {x} = \bar x_0$.  As we saw in the previous session, We can achieve this by finding the p-value associated with the test statistic given by
 
 $$
 z_0 = \frac{\bar x_0 - \mu_0}{\sigma}
 $$
 
-Therefore, $p$ can be interpreted as the possibility/probability of observing a sample with the sample mean $\x_0$ for a population with the population mean $\mu_0$. The observation of this sample solely occurs due to [random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values), since we assumed $H_0$ is true. 
-> $p$-values are calculated based on the assumptions that the null is true for the population and that the difference in the sample **is caused entirely by random chance.**
+Therefore, $p$ can be interpreted as the possibility/probability of observing a sample with the sample mean $\bar x_0$ for a population with the population mean $\mu_0$ due to [random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values). Remember we assumed $H_0$ is true!
 
-Reviewing the interpretation of $p$ above, we can 
 
 ## $p$-value and $\alpha$
 
-Assuming $H_0$ is true, $p$ gives the probability of observing an effect (like coming up with a sample with sampling mean $\bar x_0$) [due to random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values). From here we make two important conclusions:
-1. $p$ is not the probability that $H_0$ is true or false, since it is based on the assumaption that $H_0$ is true. 
-2. $p$ provides a measure of observing an effect when in fact it does not exist, simply due to sampling errors.
+We should remind the reader to avoid the commom misunderstanding: $p$ is not the probability that $H_0$ is true or false. It is because to claucate $p$, we already assumed $H_0$ is true. Instead, $p$ provides a measure of observing an effect when in fact it does not exist. [In other words](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/),
+> $p$-value is simply a measure of the strength of evidence against[or in favor of] $H_0$.
 
-[Therefore](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/),
-> Thus a p value is simply a measure of the strength of evidence against $H_0$.
+This means that low(high) $p$-value indicates a weak(strong) $H_0$, i.e. the effect is unlikely(likely) to be due to pure sampling error.
 
-On the other hand, $\alpha$ or the significance is an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. Therefore, $p \leq \alpha$ means the evidence in support of $H_0$ is not strong in \alpha level and $p > \alpha$ says the evidence are strong enough not to reject $H_0$.
+Therefore, we found out how $p$-value, as the result of Null Hypothesis can be in favor or against $H_0$. 
 
-BETTER: when p = 3%, it means there is a 3% chance to observe an effect (solely due to the sampling error). On the other hand in $\alpha = 5%$ level we expect the randomness up to 5%. Since we cannot be up to 5% sure that the effect is solely due to random errors, we reject the assumption undelying the calculation of $p-value$. 
+Here is where $\alpha$ comes into play: an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. To clarify this, let's try two thresholds ($a\lpha = 0.05$ and $\alpha = 0.03$) for $p=0.03$. 
 
-On the other hand, if $p > \alpha$, we claim that at $\alpha$ level, it is possible to observe those effects due to random erros. 
 
-The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
+
+Therefore, $p \leq \alpha$ means the evidence in support of $H_0$ is not strong in \alpha level and $p > \alpha$ says the evidence are strong enough not to reject $H_0$.
+
+$p = 0.03$: there is a 3% chance of observing an effect, solely due to the sampling error, when it is actually none.
+$\alpha = 0.05$ means we are up to 5% confident that any observed effect is due to random sampling. Since we only have 3% chance of observing the effect due to sampling error, the confidence in $\alpha$ level is not fulfilled and consequently we reject $H_0$ at $alpha$-level. 
+
+On the other hand, $\alpha = 0.01$ indicates if we are up to 1% confident that $H_0$ is true and the observed effect are due to random sampling. Comparing this with $p = 0.03$, we can expect to see this random effect in $\alpha$-level and that's why we do not reject $H_0$. 
 
 If you have any feedback, please do not hesistate to share.
