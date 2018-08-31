@@ -6,11 +6,11 @@ Understanding Type I and II errors are of the fundamental importance in interpre
 
 In Hypothesis Testing, we normally define (somehow arbitrary) Significance Level ($\alpha$) and use our test statistic to calcuate the associated $p$-value. When $p \leq \alpha$ we reject the Null Hypothesis, $H_0$, and do not reject it otherwise. 
 
-The reason for rejecting $H_0$ when $p \leq \alpha$ was not clear to me. The tremendous number of resources online and offline gives us the impression that these concepts are well understood and we [sometimes do not have the guts](https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th) to question them. On the other hand, studying the results of a simple Google search shows that they are some of the most confusing and misunderstood concepts. [Academic research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/) also warn against misinterpreting $p$-values:
+The reason for rejecting $H_0$ when $p \leq \alpha$ was not clear to me. The tremendous number of resources online and offline gives us the impression that these concepts are well understood and, sometimes, we [do not have the guts](https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th) to question them. On the other hand, studying the results of a simple Google search shows that they are some of the most confusing and misunderstood concepts. [Academic research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/) also warn against misinterpreting them:
 
 > The concept of a $p$-value is not simple and any statements associated with it must be considered cautiously.
 
-I briefly disucc how $p$-values are calculated and use a simple example to interpret it. then, I relate it to Type I error and Significance Level. It is assumed the reader is familiar with Hypothesis Testing. 
+Here I briefly disucc what $p$-values are and how they are calculated. I use a simple example to interpret $p$-values and then  relate it to Type I error and Significance Level. It is assumed the reader is familiar with Hypothesis Testing. 
 
 
 ## Where does p-value come from?
