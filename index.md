@@ -10,7 +10,7 @@ The reason for rejecting $H_0$ when $p \leq \alpha$ was not clear to me. The tre
 
 > The concept of a $p$-value is not simple and any statements associated with it must be considered cautiously.
 
-I continue with a brief discussion on p-values, discuss it is via a simple example, and then relate it to Type I error and significance level. I assume reader is familiar with the concepts behind Hypothesis Testing. 
+I continue with a brief discussion on p-values, interpret it using a simple example, and then relate it to Type I error and significance level. It is assumed the reader is familiar with Hypothesis Testing. 
 
 
 ## Where does p-value come from?
