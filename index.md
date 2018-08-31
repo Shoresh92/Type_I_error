@@ -6,7 +6,9 @@ Understanding Type I and II errors are of the fundamental importance in interpre
 
 In Hypothesis Testing, we normally define (somehow arbitrary) significance level ($\alpha$) and use our test statistic to calcuate the well-known $p$-value. If $p \leq \alpha$ we reject the Null Hypothesis, $H_0$, and do not reject it otherwise. 
 
-The reason why we reject $H_0$ when $p \leq \alpha$ was not quite clear to me. As pointed about by a user on [Stackexchange](https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th), and with having access to stat books, articles and blog posts online as well as offline resources, we sometimes don't have the guts to question the underlying assumptions and conclusions of well-known mehotds such as A/B testing. Something you get the impressions that everybody knows it  except YOU! On the other hand, a simple Google search shows that it is one of the most confusing and misused concepts.
+The reason why we reject $H_0$ when $p \leq \alpha$ was not quite clear to me. As pointed about by a user on [Stackexchange](https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th), and with having access to stat books, articles and blog posts online as well as offline resources, we sometimes don't have the guts to question the underlying assumptions and conclusions of well-known mehotds such as A/B testing. Something you get the impressions that everybody knows it  except YOU! On the other hand, a simple Google search shows that it is one of the most confusing and misused concepts. [Academic research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/) also warn against misunderstanding and mis-interpreting p-value. 
+
+> The concept of a p value is not simple and any statements associated with it must be considered cautiously.
 
 Before I continue, I assume the reader is familiar with Hypothesis Testing and to keep this writing short, I only discuss few concepts that are crucial in understanding the outcome. 
 
@@ -49,27 +51,24 @@ where $n$ is the sample size. The z-score table can help us find the $p$-value. 
 Let's assume $p=0.03$. This means that if the Null Hypotheis is true, only 3% of the time we find a random sample with $\bar x = \bar x_0$. 
 
 
-## $\alpha$ and $p$-value
+## $p$-value and $\alpha$
 
-$\alpha$, the [significance level](https://en.wikipedia.org/wiki/Statistical_significance#Role_in_statistical_hypothesis_testing), is the probability of the occurence of Type I error, i.e., rejecting Null Hypothesis when it is true. The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
+Assuming $H_0$ is true, $p$ gives the probability of observing an effect (like coming up with a sample with sampling mean $\bar x_0$) [due to random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values). From here we make two important conclusions:
+1. $p$ is not the probability that $H_0$ is true or false, since it is based on the assumaption that $H_0$ is true. 
+2. $p$ provides a measure of observing an effect when in fact it does not exist, simply due to sampling errors.
 
-Significance level is the level of risk we want to take in rejecting $H_0$. The lower this value, the more confident we are about the outcome of the test.  For example, $\alpha$ = 5% indicates we accept 5% risk in rejecting true $H_0$. In other words, we want to be up to 95% confident that we rightfully rejected Null. 
+[Therefore](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/),
+> Thus a p value is simply a measure of the strength of evidence against $H_0$.
 
-On the other hand, $p$-value is the probability of observing an effect (like coming up with a sample with sampling mean $\bar x_0$) [due to random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values), when the effect does not actually exist (the population mean is $\mu_0$). Obvoiusly, the closer $\bar x_0$ to $\mu_0$ (or  $z_0$ to 0), the bigger the area under curve and p-value, and vice versa.
+On the other hand, $\alpha$ or the significance level is an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. Therefore, $p \leq \alpha$ means the evidence in support of $H_0$ is not strong in \alpha level and $p > \alpha$ says the evidence are strong enough not to reject $H_0$.
 
-[NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/)
-> This is the most critical concept to keep in mind as it means that one cannot infer from the p value whether H0 is true or false.
+$\alpha$, the [significance level](https://en.wikipedia.org/wiki/Statistical_significance#Role_in_statistical_hypothesis_testing), is the probability of the occurence of Type I error, i.e., rejecting Null Hypothesis when it is true. 
 
-[NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/)
-> The concept of a p value is not simple and any statements associated with it must be considered cautiously.
+The statement "when the Null Hypothesis is true" is a very important assumption behind the definition of Type I error and is often overlooked.
 
-> the p value only gives us the probability that, simply owing to the chance selection of patients from the larger (target) population, the clinical experiment resulted in a difference in the samples, as large or larger, than the actual 26% observed.
+Significance level is the level of risk we want to take in rejecting $H_0$. The lower this value, the more confident we are about the outcome of the test.
 
-> Thus a p value is simply a measure of the strength of evidence against H0.
 
-> The p value is calculated based on an assumption that chance is the only reason for observing any difference. Thus it cannot provide evidence for the truth of that statement.
-
-> An artificial cut point is chosen, called the significance level, and the result is called statistically significant if the p value is less than the significance level leading to the rejection of the null hypothesis.
 
 
 
