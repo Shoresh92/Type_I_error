@@ -10,7 +10,7 @@ The reason for rejecting $H_0$ when $p \leq \alpha$ was not clear to me. The tre
 
 > The concept of a $p$-value is not simple and any statements associated with it must be considered cautiously.
 
-Here I briefly disucc what $p$-values are and how they are calculated. I use a simple example to interpret $p$-values and then  relate it to Type I error and Significance Level. It is assumed the reader is familiar with Hypothesis Testing. 
+Here I briefly disuss how $p$-values are calcluated and interpreted. I use a simple example to interpret $p$-value and then  relate it to Type I error and Significance Level. It is assumed the reader is familiar with Hypothesis Testing. 
 
 
 ## Where does p-value come from?
@@ -24,17 +24,17 @@ $$
 z = \frac{x - \mu}{\sigma}
 $$
 
-where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution of $x$ values, respectively and $z$ is the z-score. 
+where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution of $x$ values, respectively, and $z$ is the z-score. 
 
-The mean and standard deviation of standard normal distribution, also known as the probability density distribution (figure below) are 1 and 0, respectively, and its area curve is unity. $p$-values are obtained from the probability density distribution. 
+The area under curve of a standard normal distribution, also known as the probability density distribution, is unity. $p$-values are obtained from the probability density distribution. 
 
-In fact, for the test statistic $z$, the associated $p$-value is the **Cumulative Probability** of observing $z \in (-\infty, z]$ under the condition that the Null Hypothesis is true (figure below). Mathematically speaking, for any $z_0$ value, we can write $p$-value as
+<div style="text-align:center"><img src ="left-tailed-test.png" height="200" width="300"/><figcaption> <font size="2">Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain</a></font></figcaption></div>
+
+In fact, for test statistic $z$, the associated $p$-value is the **Cumulative Probability** of observing $z \in (-\infty, z]$ under the condition that the Null Hypothesis is true (figure above). Mathematically speaking, for any $z_0$ value, we can write $p$ in the form of conditional probability, 
 
 $$
 p\big(z\in(-\infty, z_0]|H_0\big)
 $$
-
-<div style="text-align:center"><img src ="left-tailed-test.png" height="200" width="300"/><figcaption> <font size="2">Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain</a></font></figcaption></div>
 
 
 ## Interpreting $p$
@@ -45,33 +45,33 @@ $$
 H_0: \mu = \mu_0,
 $$
 
-indicating that the popuation mean is in fact equal to $\mu_0$ and $\bar x_0$ is an error due to sampling. Assuming the Null Hypotheis is true, we then want to find out the likelihood of generating a sample with the sample mean equal or smaller than $\bar {x} = \bar x_0$.  As we saw in the previous session, We can achieve this by finding the p-value associated with the test statistic given by
+indicating that the popuation mean is equal to $\mu_0$ and $\bar x_0$ is an error due to sampling. Assuming the Null Hypotheis is true, we then want to find out the likelihood of generating a sample with the sample mean equal or smaller than $\bar x_0$.  As we saw in the previous session we can achieve this by finding the p-value associated with the test statistic given by
 
 $$
 z_0 = \frac{\bar x_0 - \mu_0}{\sigma}
 $$
 
-Therefore, $p$ can be interpreted as the possibility/probability of observing a sample with the sample mean $\bar x_0$ for a population with the population mean $\mu_0$ due to [random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values). Remember we assumed $H_0$ is true!
+Therefore, $p$ can be interpreted as the possibility/probability of observing a sample with the sample mean $\bar x_0$ for a population with the population mean $\mu_0$ due to [random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values).
 
 
 ## $p$-value and $\alpha$
 
-We should remind the reader to avoid the commom misunderstanding: $p$ is not the probability that $H_0$ is true or false. It is because to claucate $p$ we already assumed $H_0$ is true. Instead, $p$ provides a measure of observing an effect when in fact it does not exist. [In other words](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/),
+We should remind the reader to avoid the commom mistake in understanding $p$: $p$ is not the probability that $H_0$ is true or false. We assumed the truthness of $H_0$ to calculate $p$. Instead, $p$ provides a measure of observing an effect when in fact it does not exist. [In other words](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/),
 > $p$-value is simply a measure of the strength of evidence against [or in favor of] $H_0$.
 
-This means that low (high) $p$-value indicates a weak (strong) $H_0$, i.e. the observed effect is unlikely (likely) to be due to pure sampling error. This is how $p$-value can be used to favor/disfavor $H_0$. And here is where $\alpha$ comes into play: an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. 
+This means that low (high) $p$-value indicates a weak (strong) $H_0$, i.e. the observed effect is unlikely (likely) be due to sampling error. This is how $p$-value can be used to favor/disfavor $H_0$. 
 
-To clarify, let's review the definition of Type I error: the probability of rejecting true Null Hypothesis. In other owrds, [type I error occurs](https://www.stat.berkeley.edu/~hhuang/STAT141/Lecture-FDR.pdf)
+And here is where $\alpha$ comes into play: an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. To clarify, let's remind that [Type I error occurs}(https://www.stat.berkeley.edu/~hhuang/STAT141/Lecture-FDR.pdf)
 > when we are observing a difference [effect] when in truth there is none.
 
-To find out how $\alpha$ and $p$ relate, let's set two significant levels ($\alpha = 0.05$ and $\alpha = 0.03$) and assume  $p=0.03$.
+To find out how $\alpha$ and $p$ relate, let's set two significant levels ($\alpha = 0.05$ and $\alpha = 0.01$) and assume  $p=0.03$.
 
 $p = 0.03$: there is a 3% chance of observing an effect, solely due to the sampling error, when there is actually none.
 
-$\alpha = 0.05$: we are up to 5% confident that any observed effect is due to random sampling. 
+$\alpha = 0.05$: we are up to 5% confident that any observed effect is due to random sampling (or 95% confident that it is not!). 
 
-Since we only have 3% chance of observing the effect due to sampling error, we cannot be up to 5% confident that the effect is only due to random sampling and we reject $H_0$ **at 5% level**. 
+Since we only have 3% chance of observing the effect due to sampling error, we cannot be up to 5% confident that the observed effect is due to random sampling and support $H_0$ at this level. Therefore, we reject $H_0$ **at 5% level**. 
 
-On the other hand, we can be up to $\alpha = 0.01$ confident that the effect is random and $H_0$ is true. Therefore, we do not reject $H_0$ **at 1% level**.
+Following the same logic, we are $\alpha = 0.01$ confident that the observed effect is random and $H_0$ is true. Therefore, we do not reject $H_0$ **at 1% level**.
 
-This interpretation can be used to interpret the results of any hypothesis testing that employs $p$-values.
+I hope the reader is convinced why $H-0$ is rejected when $p \leq \alpha$. This interpretation can be used to interpret the results of any hypothesis testing that employs $p$-values.
