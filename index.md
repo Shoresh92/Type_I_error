@@ -31,7 +31,7 @@ The mean and standard deviation of standard normal distribution, also known as t
 In fact, for the test statistic $z$, the associated $p$-value is the **Cumulative Probability** of observing $z \in (-\infty, z]$ under the condition that the Null Hypothesis is true (figure below). Mathematically speaking, for any $z_0$ value, we can write $p$-value as
 
 $$
-p\big(z\in(\infty, z_0]|H_0\big)
+p\big(z\in(-\infty, z_0]|H_0\big)
 $$
 
 <div style="text-align:center"><img src ="left-tailed-test.png" height="200" width="300"/><figcaption> <font size="2">Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain</a></font></figcaption></div>
@@ -39,24 +39,24 @@ $$
 
 ## Interpretation
 
-Having the sample mean, $\bar x = \bar x_0$, I want to find out the likelihood that the population mean is $\mu = \mu_0$. I start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
+Let's assume we want to verify the claim that for the sample mean $\bar x = \bar x_0$, the population mean is $\mu = \mu_0$. 
+We start with developing the Null Hypothesis (assuming a random sample and Central Limit Theorem that leads to $\mu_{\bar x} = \mu$), 
 as 
 
 $$
-H_0: \mu = \mu_0
-$$.
-
-Assuming the Null Hypotheis is true, I want to find out how likely is it that $\bar {x}$ belongs to a disrtibution with $\mu = \mu_0$. Hence, I define the test statistic as
-
-$$
-z_0 = \frac{\bar x_0 - \mu_0}{\sigma/\sqrt{n}}
+H_0: \mu = \mu_0,
 $$
 
-where $n$ is the sample size. The z-score table can help us find the $p$-value. As a reminder, the obtained $p$-value is the cumulative probability that $z \leq z_0$ belong to a distribution with $\mu = \mu_0$ assuming that $H_0$ is true. [In other words](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values), 
+indicating that the popuation mean is in fact equal to $\mu_0$. Assuming the Null Hypotheis is true, we then want to find out how likely is it that we can a sample with sample mean equal or smaller than $\bar {x} = \bar x_0$.  We can achive that by finding the p-value associated with the test statistic given by
+
+$$
+z_0 = \frac{\bar x_0 - \mu_0}{\sigma}
+$$
+
+Therefore, $p$ can be interpreted as the possibility/probability of observing a sample with the sample mean $\x_0$ for a population with the population mean $\mu_0$. The observation of this sample solely occurs due to [random sampling error](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values), since we assumed $H_0$ is true. 
 > $p$-values are calculated based on the assumptions that the null is true for the population and that the difference in the sample **is caused entirely by random chance.**
 
-Let's assume $p=0.03$. This means that if the Null Hypotheis is true, only 3% of the time we find a random sample with $\bar x = \bar x_0$. 
-
+Reviewing the interpretation of $p$ above, we can 
 
 ## $p$-value and $\alpha$
 
