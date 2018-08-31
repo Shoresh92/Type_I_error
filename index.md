@@ -4,7 +4,7 @@
 
 Understanding Type I and II errors are of the fundamental importance in interpreting the results of Hypothesis Tests such as A/B testing. 
 
-In Hypothesis Testing, we normally define (somehow arbitrary) Significance Level ($\alpha$) and use our test statistic to calcuate the associated $p$-value. When $p \leq \alpha$ we reject the Null Hypothesis, $H_0$, and do not reject it otherwise. 
+In Hypothesis Testing, we define (somehow arbitrary) Significance Level ($\alpha$) and use our test statistic to calcuate the associated $p$-value. When $p \leq \alpha$ we reject the Null Hypothesis, $H_0$, and do not reject it otherwise. 
 
 The reason for rejecting $H_0$ when $p \leq \alpha$ was not clear to me. The tremendous number of resources online and offline gives us the impression that these concepts are well understood and, sometimes, we [do not have the guts](https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th) to question them. On the other hand, studying the results of a simple Google search shows that they are some of the most confusing and misunderstood concepts. [Academic research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/) also warn against misinterpreting them:
 
@@ -61,17 +61,22 @@ We should remind the reader to avoid the commom misunderstanding: $p$ is not the
 
 This means that low(high) $p$-value indicates a weak(strong) $H_0$, i.e. the effect is unlikely(likely) to be due to pure sampling error.
 
-Therefore, we found out how $p$-value, as the result of Null Hypothesis can be in favor or against $H_0$. 
-
-Here is where $\alpha$ comes into play: an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. To clarify this, let's try two thresholds ($a\lpha = 0.05$ and $\alpha = 0.03$) for $p=0.03$. 
+Therefore, we found out how $p$-value, as the result of Null Hypothesis can be in favor or against $H_0$. And here is where $\alpha$ comes into play: an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. 
 
 
+To clarify this, let's review the definition of Type I erros: the probability of rejecting true Null Hypothesis. In other owrds, [type I error occurs](https://www.stat.berkeley.edu/~hhuang/STAT141/Lecture-FDR.pdf)
+> when we are observing a difference when in truth there is none.
 
-Therefore, $p \leq \alpha$ means the evidence in support of $H_0$ is not strong in \alpha level and $p > \alpha$ says the evidence are strong enough not to reject $H_0$.
+, and let's use the definition above to relate $\alpha$ to $p$ in an example where we assign $\alpha$ two values ($a\lpha = 0.05$ and $\alpha = 0.03$) for $p=0.03$.
 
 $p = 0.03$: there is a 3% chance of observing an effect, solely due to the sampling error, when it is actually none.
-$\alpha = 0.05$ means we are up to 5% confident that any observed effect is due to random sampling. Since we only have 3% chance of observing the effect due to sampling error, the confidence in $\alpha$ level is not fulfilled and consequently we reject $H_0$ at $alpha$-level. 
 
-On the other hand, $\alpha = 0.01$ indicates if we are up to 1% confident that $H_0$ is true and the observed effect are due to random sampling. Comparing this with $p = 0.03$, we can expect to see this random effect in $\alpha$-level and that's why we do not reject $H_0$. 
+$\alpha = 0.05$: we are up to 5% confident that any observed effect is due to random sampling. 
+
+Since we only have 3% chance of observing the effect due to sampling error, we cannot be up to 5% confident that the effect is only due to random sampling and we reject $H_0$ **at 5% level**. 
+
+On the other hand, since have 3% chance of observing the effect due to sampling error, we are up to $\alpha = 0.01$ confident that the effect is random and $H_0$ is true. Therefore, we do not reject $H_0$ **at 1% level**.
+
+This interpretation can be used to interpret the results of any hypothesis testing that employs $p$-values. 
 
 If you have any feedback, please do not hesistate to share.
