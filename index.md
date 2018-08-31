@@ -56,18 +56,15 @@ Therefore, $p$ can be interpreted as the possibility/probability of observing a 
 
 ## $p$-value and $\alpha$
 
-We should remind the reader to avoid the commom misunderstanding: $p$ is not the probability that $H_0$ is true or false. It is because to claucate $p$, we already assumed $H_0$ is true. Instead, $p$ provides a measure of observing an effect when in fact it does not exist. [In other words](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/),
-> $p$-value is simply a measure of the strength of evidence against[or in favor of] $H_0$.
+We should remind the reader to avoid the commom misunderstanding: $p$ is not the probability that $H_0$ is true or false. It is because to claucate $p$ we already assumed $H_0$ is true. Instead, $p$ provides a measure of observing an effect when in fact it does not exist. [In other words](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/),
+> $p$-value is simply a measure of the strength of evidence against [or in favor of] $H_0$.
 
-This means that low(high) $p$-value indicates a weak(strong) $H_0$, i.e. the effect is unlikely(likely) to be due to pure sampling error.
+This means that low (high) $p$-value indicates a weak (strong) $H_0$, i.e. the observed effect is unlikely (likely) to be due to pure sampling error. This is how $p$-value can be used to favor/disfavor $H_0$. And here is where $\alpha$ comes into play: an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. 
 
-Therefore, we found out how $p$-value, as the result of Null Hypothesis can be in favor or against $H_0$. And here is where $\alpha$ comes into play: an artificial cutpoint which is used as a measure to reject or not-reject the Null Hypothesis. 
+To clarify, let's review the definition of Type I error: the probability of rejecting true Null Hypothesis. In other owrds, [type I error occurs](https://www.stat.berkeley.edu/~hhuang/STAT141/Lecture-FDR.pdf)
+> when we are observing a difference [effect] when in truth there is none.
 
-
-To clarify this, let's review the definition of Type I erros: the probability of rejecting true Null Hypothesis. In other owrds, [type I error occurs](https://www.stat.berkeley.edu/~hhuang/STAT141/Lecture-FDR.pdf)
-> when we are observing a difference when in truth there is none.
-
-, and let's use the definition above to relate $\alpha$ to $p$ in an example where we assign $\alpha$ two values ($a\lpha = 0.05$ and $\alpha = 0.03$) for $p=0.03$.
+To find out how $\alpha$ and $p$ relate, let's set two significant levels ($\alpha = 0.05$ and $\alpha = 0.03$) and assume  $p=0.03$.
 
 $p = 0.03$: there is a 3% chance of observing an effect, solely due to the sampling error, when it is actually none.
 
@@ -75,7 +72,7 @@ $\alpha = 0.05$: we are up to 5% confident that any observed effect is due to ra
 
 Since we only have 3% chance of observing the effect due to sampling error, we cannot be up to 5% confident that the effect is only due to random sampling and we reject $H_0$ **at 5% level**. 
 
-On the other hand, since have 3% chance of observing the effect due to sampling error, we are up to $\alpha = 0.01$ confident that the effect is random and $H_0$ is true. Therefore, we do not reject $H_0$ **at 1% level**.
+On the other hand, for the same reason we can be up to $\alpha = 0.01$ confident that the effect is random and $H_0$ is true. Therefore, we do not reject $H_0$ **at 1% level**.
 
 This interpretation can be used to interpret the results of any hypothesis testing that employs $p$-values. 
 
