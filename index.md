@@ -66,14 +66,12 @@ To clarify, let's review the definition of Type I error: the probability of reje
 
 To find out how $\alpha$ and $p$ relate, let's set two significant levels ($\alpha = 0.05$ and $\alpha = 0.03$) and assume  $p=0.03$.
 
-$p = 0.03$: there is a 3% chance of observing an effect, solely due to the sampling error, when it is actually none.
+$p = 0.03$: there is a 3% chance of observing an effect, solely due to the sampling error, when there is actually none.
 
 $\alpha = 0.05$: we are up to 5% confident that any observed effect is due to random sampling. 
 
 Since we only have 3% chance of observing the effect due to sampling error, we cannot be up to 5% confident that the effect is only due to random sampling and we reject $H_0$ **at 5% level**. 
 
-On the other hand, for the same reason we can be up to $\alpha = 0.01$ confident that the effect is random and $H_0$ is true. Therefore, we do not reject $H_0$ **at 1% level**.
+On the other hand, we can be up to $\alpha = 0.01$ confident that the effect is random and $H_0$ is true. Therefore, we do not reject $H_0$ **at 1% level**.
 
-This interpretation can be used to interpret the results of any hypothesis testing that employs $p$-values. 
-
-If you have any feedback, please do not hesistate to share.
+This interpretation can be used to interpret the results of any hypothesis testing that employs $p$-values.
