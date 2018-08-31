@@ -6,19 +6,19 @@ Understanding Type I and II errors are of the fundamental importance in interpre
 
 In Hypothesis Testing, we normally define (somehow arbitrary) significance level ($\alpha$) and use our test statistic to calcuate the well-known $p$-value. If $p \leq \alpha$ we reject the Null Hypothesis, $H_0$, and do not reject it otherwise. 
 
-The reason why we reject $H_0$ when $p \leq \alpha$ was not quite clear to me. As pointed about by a user on [Stackexchange](https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th), and with having access to stat books, articles and blog posts online as well as offline resources, we sometimes don't have the guts to question the underlying assumptions and conclusions of well-known mehotds such as A/B testing. Something you get the impressions that everybody knows it  except YOU! On the other hand, a simple Google search shows that it is one of the most confusing and misused concepts. [Academic research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/) also warn against misunderstanding and mis-interpreting p-value. 
+The reason why we reject $H_0$ when $p \leq \alpha$ was not quite clear to me. With access to stat books, articles and blog posts online as well as offline resources, we sometimes, in words of a Stackexchange user (do not have the guts[(https://math.stackexchange.com/questions/582945/in-statistics-why-do-you-reject-the-null-hypothesis-when-the-p-value-is-less-th)] to question our understanding of well-known mehotds such as A/B testing. You get the impressions that everybody gets it except YOU! On the other hand, a simple Google search shows that it is one of the most confusing concepts. [Academic research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2895822/) also warn against misunderstanding and misinterpreting $p$-value and significance level.
 
 > The concept of a p value is not simple and any statements associated with it must be considered cautiously.
 
-Before I continue, I assume the reader is familiar with Hypothesis Testing and to keep this writing short, I only discuss few concepts that are crucial in understanding the outcome. 
+Before I continue, I assume the reader is familiar with the concepts behind Hypothesis Testing. 
 
 
 ## Where does p-value come from?
 
 According to [minitab](http://blog.minitab.com/blog/adventures-in-statistics-2/how-to-correctly-interpret-p-values)
-> In technical terms, a $p$-value is the probability of obtaining an effect at least as extreme as the one in your sample data, assuming the truth of the null hypothesis. 
+> A $p$-value is the probability of obtaining an effect at least as extreme as the one in your sample data, assuming the truth of the null hypothesis. 
 
-Let's elaborate on this: Any variable $x$ with normal distribution can be transormed to variable $z$ with standard normal distribution using the following formula
+Let's elaborate on this: any variable $x$ with normal distribution can be transormed to variable $z$ with standard normal distribution using the following formula
 
 $$
 z = \frac{x - \mu}{\sigma}
@@ -26,10 +26,9 @@ $$
 
 where $\mu$ and $\sigma$ are the mean and standard deviation of the distribution, respectively and $z$ is the z-score. 
 
-The mean and standard deviation of standard normal distribution, also known as the probability density distribution (figure below) are 1 and 0, respectively. Also, the area aunder curve for the distribution is unity. $p$-value is obtained from the probability density distribution. 
+The mean and standard deviation of standard normal distribution, also known as the probability density distribution (figure below) are 1 and 0, respectively and its area curve is unity. $p$-value is obtained from the probability density distribution. 
 
-One, however, should note that $p$-value is of the type of **Cumulative Probability**. For instance, for left-tailed test and the test statistic $z_0$, $p$-value is the cumulative probability of $z$-values in the $[-\infty, z_0]$ range (figure below). Check out [this link](http://www.fairlynerdy.com/normal-distribution-summary/) for more. 
-
+In fact, for the test statistic $z$, $p$-value is the **Cumulative Probability** of observing $z \el (-\infty, z]$ under the condition that the Null Hypothesis is true (figure below).
 
 <div style="text-align:center"><img src ="left-tailed-test.png" height="200" width="300"/><figcaption> <font size="2">Source: <a href="http://www.mathcaptain.com/statistics/p-value.html"> Mathcaptain</a></font></figcaption></div>
 
